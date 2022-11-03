@@ -8,11 +8,19 @@ header  {
     margin: 2%;
 }
 
+
 #right-col {
     width:25%;
     margin-right: 1%;
     display:flex;
     justify-content: center;
+}
+
+aside {
+    margin-right: 1%;
+    display:flex;
+    justify-content: flex-end;
+
     border: solid 2px purple;
     border-radius: 5%;
 }
