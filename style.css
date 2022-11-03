@@ -1,8 +1,11 @@
 * {
     margin: 0;
-    padding: 0;
-    
+    padding: 0 
 
+}
+
+body, html {
+    height:100%;
 }
 
 p {
@@ -19,6 +22,7 @@ header  {
     margin-right: 1%;
     display:flex;
     justify-content: center;
+    background-image: linear-gradient(rgb(222, 222, 236),rgb(135, 135, 214));
     
 }
 
@@ -55,10 +59,10 @@ aside {
 
 #left-col {
     width:70%;
+    margin-left:2%;
     border-radius: 5%;
     box-shadow: 5px 15px rgb(245, 234, 234);
     background-image: linear-gradient(rgb(254, 254, 254),rgb(129, 129, 198));
-    border-image: url('Assets/images/9112-weather-dashboard-powerpoint-2.jpg') 50% stretch;
 
     
 }
@@ -85,3 +89,17 @@ aside {
     height:100vh;
 }
 
+#bg {
+    /* The image used */
+    background-image: url("./Assets/images/rain.window.jpeg");
+  
+    /* Full height */
+    height: 100%;
+  
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: repeat;
+    background-size: cover;
+    
+
+}
