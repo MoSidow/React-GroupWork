@@ -89,6 +89,7 @@ aside {
     height:100vh;
 }
 
+
 #bg {
     /* The image used */
     background-image: url("./Assets/images/rain.window.jpeg");
@@ -103,3 +104,10 @@ aside {
     
 
 }
+
+#map  {
+    height: 400px;
+    width: 100%;
+    }
+
+
