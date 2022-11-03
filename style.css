@@ -14,6 +14,7 @@ header  {
     margin-right: 1%;
     display:flex;
     justify-content: center;
+    
 }
 
 aside {
@@ -28,30 +29,36 @@ aside {
 #main-container {
     width:100%;
     margin:1%;
-
+       
 }
 
 #left-col {
     width:70%;
-    border: solid 2px black;
+    border-radius: 5%;
+    box-shadow: 5px 15px rgb(245, 234, 234);
+    background-image: linear-gradient(rgb(254, 254, 254),rgb(129, 129, 198));
+    border-image: url('Assets/images/9112-weather-dashboard-powerpoint-2.jpg') 50% stretch;
 
+    
 }
 #main-container {
     display:flex;
+    
 }
 
 #title-row  {
     border: solid 2px rgb(82, 169, 111);
-    height:15vh;
+    height:30vh;
+    
 }
 
 #day-weather-row{
     border: solid 2px rgb(91, 67, 138);
-    height:15vh;
+    height:30vh;
 }
 
 #bottom-row  {
     border: solid 2px rgb(191, 28, 56);
-    height:40vh;
+    height:100vh;
 }
 
