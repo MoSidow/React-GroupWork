@@ -1,7 +1,12 @@
 * {
     margin: 0;
     padding: 0;
+    
 
+}
+
+p {
+    text-align: center;
 }
 
 header  {
@@ -21,16 +26,32 @@ aside {
     margin-right: 1%;
     display:flex;
     justify-content: flex-end;
-
     border: solid 2px purple;
     border-radius: 5%;
+    
 }
 
 #main-container {
     width:100%;
     margin:1%;
-       
+    display: flex;
+    flex-direction: row;
+
 }
+
+#daily-weather-box {
+    width: 12%;
+    height: 57%;
+    margin: 1%;
+    margin-top:5%;
+    background-color: white;
+    border: solid 2px rgb(165, 217, 217);
+    border-radius: 5%;
+
+}
+   
+   
+
 
 #left-col {
     width:70%;
@@ -55,6 +76,8 @@ aside {
 #day-weather-row{
     border: solid 2px rgb(91, 67, 138);
     height:30vh;
+    display:flex;
+    
 }
 
 #bottom-row  {
