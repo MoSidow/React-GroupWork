@@ -18,7 +18,6 @@ header  {
 }
 
 #main-container {
-    height: 50vh;
     width:100%;
     margin:1%;
 
@@ -32,3 +31,19 @@ header  {
 #main-container {
     display:flex;
 }
+
+#title-row  {
+    border: solid 2px rgb(82, 169, 111);
+    height:15vh;
+}
+
+#day-weather-row{
+    border: solid 2px rgb(91, 67, 138);
+    height:15vh;
+}
+
+#bottom-row  {
+    border: solid 2px rgb(191, 28, 56);
+    height:40vh;
+}
+
