@@ -2,24 +2,24 @@
 
 function initMap() {
    
-    const uluru = { lat: -25.344, lng: 131.031 };
-   
-    const map = new google.maps.Map(document.getElementById("map"), {
-      zoom: 4,
-      center: uluru,
-    });
-    
-    const marker = new google.maps.Marker({
-      position: uluru,
-      map: map,
-    });
-  }
+  const uluru = { lat: -25.344, lng: 131.031 };
+ 
+  const map = new google.maps.Map(document.getElementById("map"), {
+    zoom: 4,
+    center: uluru,
+  });
   
-  window.initMap = initMap;
+  const marker = new google.maps.Marker({
+    position: uluru,
+    map: map,
+  });
+}
 
-// function for google maps api
+window.initMap = initMap;
 
-var location = document.getElementById('#location');
+
+
+var mylocation = document.getElementById('#location');
 var searchLocation = document.getElementById('#search');
 
 var weatherAPIKey = '272b68b95d1c42ff7655c2f715fa4879';
@@ -29,9 +29,8 @@ var fiveDayForecast = 5;
 
 // Gets the location the user has submitted
 function getLocation(e){
-    var userInput = location.value;
-    console.log('Searching');
+  var userInput = location.value;
+  console.log('Searching');
 }
 
 searchLocation.addEventListener("click", getLocation);
-
