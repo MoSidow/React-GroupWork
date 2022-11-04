@@ -87,6 +87,15 @@ aside {
 #bottom-row  {
     border: solid 2px rgb(191, 28, 56);
     height:100vh;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#extra-weather-info {
+    height: 30vh;
+    width: 35vh;
+    margin: 2%;
+    border: solid 2px white;
 }
 
 
