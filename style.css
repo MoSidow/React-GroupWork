@@ -78,15 +78,16 @@ aside {
 }
 
 #title-row  {
-    border: solid 2px rgb(82, 169, 111);
     height:30vh;
-    background-image: linear-gradient(rgb(254, 254, 254),rgb(129, 129, 198));
+    background-image: linear-gradient(rgb(254, 254, 254),rgb(126, 126, 144));
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
     
     
 }
 
 #day-weather-row{
-    border: solid 2px rgb(91, 67, 138);
     height:30vh;
     display:flex;
     flex-wrap: wrap;
@@ -95,7 +96,6 @@ aside {
 }
 
 #bottom-row  {
-    border: solid 2px rgb(191, 28, 56);
     height:100vh;
     display: flex;
     flex-wrap: wrap;
