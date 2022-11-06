@@ -91,7 +91,6 @@ aside {
     height:30vh;
     display:flex;
     flex-wrap: wrap;
-    background-image: linear-gradient(rgb(254, 254, 254),rgb(129, 129, 198));
     
 }
 
@@ -99,6 +98,7 @@ aside {
     height:100vh;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 #title-row, #day-weather-row, #bottom-row {
@@ -109,10 +109,10 @@ aside {
 #extra-weather-info {
     height: 30vh;
     width: 35vh;
-    margin: 2%;
+    margin: 1%;
     border: solid 2px white;
     background-color: white;
-    border-radius: 5%;
+    border-radius: 25%;
 }
 
 
