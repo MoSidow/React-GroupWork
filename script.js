@@ -14,3 +14,14 @@ function getLocation(){
 }
 
 searchLocation.addEventListener("click", getLocation);
+
+
+
+
+searchLocation.addEventListener("click", function () {
+    var searchText = document.getElementById("location").value;  
+    var showtext = document.getElementById("your-location")
+    
+    showtext.append(searchText)
+    
+});
