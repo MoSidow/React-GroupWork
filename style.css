@@ -24,7 +24,7 @@ header  {
 }
 
 img {
-    border: 1px solid #ddd
+    border: 1px solid #ddd;
     border-radius: 15px;
     padding: 5px;
     width: 220px;
@@ -163,4 +163,3 @@ aside {
 }
 
 
-}
