@@ -15,43 +15,38 @@ p {
 }
 
 header  {
+    
+    display:flex;
+    justify-content: center;
     margin: 4%;
     color: white;
-    text-shadow: 0 0 10px pink;
+    text-shadow: 0 0 10px rgb(185, 92, 108);
     font-family: "sofia", "serif";
     text-align: center;
     font-size: 30px;
     
 }
 
-img {
-    border: 1px solid #ddd
+#logo {
+    border: 1px solid #ddd;
     border-radius: 15px;
     padding: 5px;
     width: 220px;
+    
 
 }
 
 #right-col {
-    width:25%;
+    width:30%;
     margin-right: 1%;
-    display:flex;
-    flex-direction: column-reverse;
+    border: solid 2px purple; 
+    border-radius: 5%;
     
     
   /*  background-image: linear-gradient(rgb(222, 222, 236),rgb(135, 135, 214)); */
     
 }
 
-aside {
-    margin-right: 1%;
-    display:flex;
-    justify-content: flex-end;
-    
-    /* border: solid 2px purple; */
-    border-radius: 5%;
-    
-}
 
 #main-container {
     width:100%;
@@ -81,7 +76,33 @@ aside {
     border-radius: 5%; 
 }
    
-   
+button {
+ 
+  background-color: #d390aa;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  height: 40px;
+  width:90%;
+  line-height: 20px;
+  outline: none;
+  padding: 10px 16px;
+  margin:1%;
+  text-align: center;
+ 
+}
+
+#appended-location {
+}
+
+.button-1:hover,
+.button-1:focus {
+  background-color: #F082AC;
+}
+
 
 
 #left-col {
@@ -93,8 +114,12 @@ aside {
 
     
 }
-#main-container {
+
+
+
+#main-container{
     display:flex;
+    
     
 }
 
@@ -105,7 +130,7 @@ aside {
     justify-content: space-around;
     align-items: center;
     box-shadow: 10px 10px 50px grey;
-    border: solid 2px black;
+    opacity: 0.7;
     
     
 }
@@ -138,6 +163,7 @@ aside {
     border: solid 2px white;
     background-color: white;
     border-radius: 25%;
+    opacity:0.8;
 }
 
 
@@ -155,7 +181,7 @@ aside {
     
     background-attachment: fixed;
     
-    opacity: 0.6;
+  
 
 }
 
@@ -170,4 +196,3 @@ aside {
 }
 
 
-}
