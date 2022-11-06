@@ -19,9 +19,9 @@ searchLocation.addEventListener("click", getLocation);
 
 
 searchLocation.addEventListener("click", function () {
-    var searchText = document.getElementById("location").value;  
+    var searchText = document.getElementById("location");  
     var showtext = document.getElementById("your-location")
     
-    showtext.append(searchText)
+    showtext.innerHTML = searchText.value;
     
 });
