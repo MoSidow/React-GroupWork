@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style.css" />
+     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
     <title>WeatherForYou</title>
   </head>
   <body id="bg">
@@ -21,39 +24,48 @@
                     <p>YOUR LOCATION</p>
                     <p>CURRENT DATE AND TIME </p>
                 </section>
-          </div>  
+           </div>   
+
           <div id="day-weather-row">
 
-                <div id="daily-weather-box">
+                <div id="daily-weather-box" class="box-shadow">
+                    <p>Day</p>
+                    <p>Temp</p>
+                </div>
+
+                <div id="daily-weather-box" class="box-shadow">
 
                 </div>
 
-                <div id="daily-weather-box">
+                <div id="daily-weather-box" class="box-shadow">
 
                 </div>
 
-                <div id="daily-weather-box">
+                <div id="daily-weather-box" class="box-shadow">
 
                 </div>
 
-                <div id="daily-weather-box">
+                <div id="daily-weather-box" class="box-shadow">
 
                 </div>
 
-                <div id="daily-weather-box">
+                <div id="daily-weather-box" class="box-shadow">
 
                 </div>
 
-                <div id="daily-weather-box">
+                <div id="daily-weather-box" class="box-shadow">
 
                 </div>
 
-                <div id="daily-weather-box">
-
-                </div>
-
-            </div>
-          <div id="bottom-row"></div>
+          </div>  
+          <div id="bottom-row">
+                <div id="extra-weather-info" class="box-shadow"></div>
+                <div id="extra-weather-info" class="box-shadow"></div>
+                <div id="extra-weather-info" class="box-shadow"></div>
+                <div id="extra-weather-info" class="box-shadow"></div>
+                <div id="extra-weather-info" class="box-shadow"></div>
+                <div id="extra-weather-info" class="box-shadow"></div>
+           </div>
         </section>    
        
 
@@ -61,11 +73,17 @@
           <div class="search-section">
             <input type="text" id="location" placeholder="Enter a location"/>
             <button id="search">Search</button>
-            
-          </div>  
+            <div id="map"></div> 
+            <button>Save location</button>
+        </aside> 
+
+      
           
-          <div id="map"></div> 
-        </aside>    
+          
+        
+
+      
+        
         
 
 
