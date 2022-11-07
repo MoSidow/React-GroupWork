@@ -44,11 +44,13 @@ header  {
 
 
 #right-col {
+    
     width:30%;
     margin-right: 1%;
     border: solid 2px purple; 
     border-radius: 5%;
-    
+    display:flex;
+    justify-content: center;
     
   /*  background-image: linear-gradient(rgb(222, 222, 236),rgb(135, 135, 214)); */
     
@@ -59,7 +61,7 @@ header  {
     width:100%;
     margin:1%;
     display: flex;
-    flex-direction: row;
+    flex-direction: row;button
     
 
 }
@@ -84,25 +86,28 @@ header  {
 }
    
 button {
- 
-  background-color: #d390aa;
-  border-radius: 8px;
-  box-sizing: border-box;
-  color: #FFFFFF;
-  cursor: pointer;
-  font-size: 14px;
-  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
   height: 40px;
-  width:90%;
-  line-height: 20px;
-  outline: none;
-  padding: 10px 16px;
-  margin:1%;
-  text-align: center;
- 
+  border: 0px;
+  border-radius: 25px;
+  background-color: pink;
+  color: #fff;
+  font-size: 1.2em;
+  font-weight: bold;
+  text-decoration: none;
+  box-shadow: 7px 6px 28px 1px rgba(0, 0, 0, 0.24);
 }
+ 
 
-#appended-location {
+
+#location-search-entry {
+    width:80%;
+    
+    
+
 }
 
 .button-1:hover,
