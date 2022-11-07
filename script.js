@@ -4,6 +4,8 @@ const APIKEY = "272b68b95d1c42ff7655c2f715fa4879";
 
 var myLocation = document.getElementById('location');
 var searchLocation = document.getElementById('search');
+var saveButton = document.getElementById("save-button")
+var showtext = document.getElementById("your-location")
 
 var fiveDayForecast = 5;
 
@@ -74,11 +76,41 @@ searchLocation.addEventListener("click", getLocation);
 
 
 
-
+// Displays user location on "your location" when location is searched
 searchLocation.addEventListener("click", function () {
-    var searchText = document.getElementById("location");  
-    var showtext = document.getElementById("your-location")
+    var searchText = myLocation;  
+    var showtext1 = showtext
     
-    showtext.innerHTML = searchText.value;
+    showtext1.innerHTML = searchText.value;
     
 });
+
+
+// function to display location on search history
+function showHistory() {
+
+    
+  var textval =  document.getElementById("location").value,
+  listItem = document.getElementById("appended-location"),
+  liItem = document.createElement("li"),
+  txtNode = document.createTextNode(textval);
+
+// event-listener to search history "li"
+  liItem.addEventListener("click", function(){
+      var text = liItem.innerHTML
+      var searchText = document.getElementById("location");
+      var showtext2 = showtext
+      lookupLocation(text)
+      
+      showtext2.innerHTML = text
+      searchText.value = liItem.innerHTML
+      
+      
+  })
+
+  liItem.appendChild(txtNode);
+  listItem.appendChild(liItem);
+  
+}
+
+saveButton.addEventListener("click", showHistory)
