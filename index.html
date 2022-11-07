@@ -8,13 +8,16 @@
      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
     <title>WeatherForYou</title>
   </head>
   <body id="bg">
     
     <header>
+      <img id="logo" src="Assets/images/New Logo.png">
       <h1>WeatherForYou</h1>
-      <img src="Assets/images/New Logo.png">
     </header>
 
     <main>
@@ -77,8 +80,14 @@
             <input type="text" id="location" placeholder="Enter a location"/>
             <button id="search">Search</button>
             <div id="map"></div> 
-            <button>Save location</button>
+            
+            <section class="saved-locations"></section>
+                <button>Save location</button>
+                <button class="appended-location">Saved Location</button>
+            </section>
         </aside> 
+
+   
 
    
     </main>
