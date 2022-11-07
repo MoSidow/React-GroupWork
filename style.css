@@ -15,11 +15,10 @@ p {
 }
 
 #logo-section {
-    display:flex;
+    display: flex;
     justify-content: left;
-    width:30%;
+    width: 30%
 }
-
 header  {
     
     display:flex;
@@ -42,6 +41,7 @@ header  {
     width: 220px;
     
 }
+
 
 #right-col {
     width:30%;
