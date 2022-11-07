@@ -46,7 +46,12 @@ function displayCurrentForecast(forecastData){
   document.getElementById('wind-speed-value').textContent = "Wind Speed: ${currentForecast.wind}KM/H";
 }
 
-// Retrieves both the current and future weather forecasts for the location, displaying both of them onscreen.
+function displayForecast(forecastData){
+  document.getElementById('your-location').textContent = (`${forecastData.name}`, `${forecastData.country}`);
+
+  getWeather(forecastData.lat, forecastData.lon);
+}
+
 function getWeather(lat, lon){
 
   fetch(
@@ -60,6 +65,8 @@ function getWeather(lat, lon){
     .then(function (data){
       displayCurrentForecast(data);
     })
+
+  
 }
 
 
