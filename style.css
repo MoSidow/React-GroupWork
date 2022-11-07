@@ -14,10 +14,16 @@ p {
     margin: 4%;
 }
 
+#logo-section {
+    display:flex;
+    justify-content: left;
+    width:30%;
+}
+
 header  {
     
     display:flex;
-    justify-content: center;
+    justify-content: left;
     margin: 4%;
     color: white;
     text-shadow: 0 0 10px rgb(185, 92, 108);
@@ -39,7 +45,6 @@ header  {
 #right-col {
     width:30%;
     margin-right: 1%;
-    border: solid 2px purple; 
     border-radius: 5%;
     
     
@@ -78,7 +83,7 @@ header  {
    
 button {
  
-  background-color: #d390aa;
+  background-color: #ed7aa6;
   border-radius: 8px;
   box-sizing: border-box;
   color: #FFFFFF;
@@ -139,7 +144,6 @@ button {
     height:30vh;
     display:flex;
     flex-wrap: wrap;
-    border: solid 2px green;
     
 }
 
@@ -148,7 +152,6 @@ button {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    border:solid 2px purple;
 }
 
 #title-row, #day-weather-row, #bottom-row {
