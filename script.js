@@ -37,3 +37,14 @@ function lookUp(search){
 }
 
 searchLocation.addEventListener("click", getLocation);
+
+
+
+
+searchLocation.addEventListener("click", function () {
+    var searchText = document.getElementById("location");  
+    var showtext = document.getElementById("your-location")
+    
+    showtext.innerHTML = searchText.value;
+    
+});

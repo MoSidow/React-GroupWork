@@ -11,16 +11,25 @@ body, html {
 p {
     text-align: center;
     font-family: "sofia", serif;
-    font-size: 200%;
     margin: 4%;
 }
 
 header  {
-    margin: 2%;
+    margin: 4%;
     color: white;
     font-family: "sofia", "serif";
+    text-align: center;
+    font-size: 30px;
+    
 }
 
+img {
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    padding: 5px;
+    width: 220px;
+
+}
 
 #right-col {
     width:25%;
@@ -56,8 +65,16 @@ aside {
     margin-top:5%;
     background-color: white;
     border-radius: 5%;
-    
 
+}
+
+#today-weather-box {
+    width: 12%;
+    height: 57%;
+    margin: 1%;
+    margin-top:5%;
+    background-color: white;
+    border-radius: 5%; 
 }
    
    
@@ -79,10 +96,12 @@ aside {
 
 #title-row  {
     height:30vh;
-    background-image: linear-gradient(rgb(254, 254, 254),rgb(126, 126, 144));
+    background-image: linear-gradient(rgb(254, 254, 254),rgb(183, 135, 180));
     display: flex;
     justify-content: space-around;
     align-items: center;
+    box-shadow: 10px 10px 50px grey;
+    border: solid 2px black;
     
     
 }
@@ -91,6 +110,7 @@ aside {
     height:30vh;
     display:flex;
     flex-wrap: wrap;
+    border: solid 2px green;
     
 }
 
@@ -99,6 +119,7 @@ aside {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    border:solid 2px purple;
 }
 
 #title-row, #day-weather-row, #bottom-row {
@@ -116,7 +137,6 @@ aside {
 }
 
 
-
 #bg {
     /* The image used */
     background-image: url("Poler.jpeg");
@@ -128,7 +148,7 @@ aside {
     background-position: center;
     background-repeat: repeat;
     background-size: cover;
-    
+    opacity: 0.6;
 
 }
 
@@ -141,4 +161,5 @@ aside {
 .box-shadow {
     box-shadow: 10px 10px 50px grey;
 }
+
 
