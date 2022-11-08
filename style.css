@@ -8,28 +8,28 @@ body, html {
     height:100%;
 }
 
+#main-container {
+    display:flex;
+    flex-direction:column;
+}
+
 p {
     text-align: center;
     font-family: "Open Sans", serif;
     margin: 4%;
 }
 
-#logo-section {
-    display: flex;
-    justify-content: left;
-    width: 30%
-}
-header  {
-    
-    display:flex;
-    justify-content: left;
+
+header  { 
+   
     margin: 4%;
     color: white;
     text-shadow: 0 0 10px rgb(185, 92, 108);
     font-family: "sofia", "serif";
     text-align: center;
+    justify-content:space-between;
+    align-items:center;
     font-size: 30px;
-    
 }
 
 
@@ -39,6 +39,8 @@ header  {
     border-radius: 15px;
     padding: 5px;
     width: 220px;
+   
+    
     
 }
 
@@ -49,6 +51,7 @@ header  {
     margin-right: 1%;
     border: solid 2px purple; 
     border-radius: 5%;
+    
  
     
   /*  background-image: linear-gradient(rgb(222, 222, 236),rgb(135, 135, 214)); */
@@ -75,17 +78,12 @@ header  {
 
 }
 
-#daily-weather-box {
-    width: 12%;
-    height: 57%;
-    margin: 1%;
-    margin-top:5%;
-    background-color: white;
-    border-radius: 5%;
-
+#day-weather-row {
+    
+    
 }
 
-#today-weather-box {
+#daily-weather-box {
     width: 12%;
     height: 57%;
     margin: 1%;
@@ -155,7 +153,6 @@ button {
     display:flex;
     flex-wrap: wrap;
     border: solid 2px green;
-    
 }
 
 #bottom-row  {
@@ -211,3 +208,4 @@ button {
 }
 
 
+/* media query to change display-flex to col and change the size of the boxes */
