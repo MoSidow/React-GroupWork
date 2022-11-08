@@ -45,9 +45,12 @@ function displayCurrentForecast(forecastData){
 
   var currentForecast = forecastData.current;
 
-  document.getElementById('daily-weather-box').textContent = `${currentForecast.temp.day}°C`;
+  document.getElementById('daily-weather-box').textContent = `${currentForecast.temp.current}°C`;
+  console.log(document.getElementById('daily-weather-box').textContent = `${currentForecast.temp}°C`)
   document.getElementById('daily-weather-box').textContent = `${currentForecast.humidity}%`;
+  console.log(document.getElementById('daily-weather-box').textContent = `${currentForecast.humidity}%`);
   document.getElementById('daily-weather-box').textContent = `${currentForecast.wind_speed}KM/H`;
+  console.log(document.getElementById('daily-weather-box').textContent = `${currentForecast.wind_speed}KM/H`)
 }
 
 // Retrives the weather for the current and future 5 days
