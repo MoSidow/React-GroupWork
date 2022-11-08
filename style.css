@@ -30,6 +30,11 @@ header  {
     justify-content:space-between;
     align-items:center;
     font-size: 30px;
+<<<<<<< Updated upstream
+=======
+    border: solid 2px black;
+    
+>>>>>>> Stashed changes
 }
 
 
@@ -42,6 +47,31 @@ header  {
    
     
     
+}
+
+<<<<<<< Updated upstream
+=======
+#navbar {
+    border: solid 2px purple;
+    
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    justify-content: right;
+}
+
+li {
+    margin:2%;
+    text-decoration: none;
+    border: dotted 1px black;
+    padding: 1%;
+}
+>>>>>>> Stashed changes
+
+a {
+    text-decoration: none;
 }
 
 
@@ -74,7 +104,6 @@ header  {
     margin:1%;
     display: flex;
     flex-direction: row;
-    
 
 }
 
