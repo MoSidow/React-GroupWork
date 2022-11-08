@@ -45,15 +45,13 @@ function displayCurrentForecast(forecastData){
 
   var currentForecast = forecastData.current;
 
-  document.getElementById('daily-weather-box').textContent = `${currentForecast.temp_value}°C`;
+  document.getElementById('daily-weather-box').textContent = `${currentForecast.temp.day}°C`;
   document.getElementById('daily-weather-box').textContent = `${currentForecast.humidity}%`;
   document.getElementById('daily-weather-box').textContent = `${currentForecast.wind_speed}KM/H`;
 }
 
 // Retrives the weather for the current and future 5 days
 function getWeather(lat, lon){
-
-  // var queryURL = `${WEATHER_API_URL}/data/2.5/onecall?lat=${lat}&lon=${lon}&appid=${WEATHER_API_KEY}`;
 
   var queryURL = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&units=imperial&exclude=minutely,hourly&appid=d91f911bcf2c0f925fb6535547a5ddc9`
 
@@ -86,7 +84,7 @@ function displayFutureForecast(forecastData){
     var forecast = forecastData.daily[i];
     console.log(forecast);
     var day = new Date(forecast.dt * 1000).toLocaleDateString('en-GB', {weekday: 'long'});
-    var temp = `${forecast.temp_value}`;
+    var temp = `${forecast.temp.day}°C`;
     var humidity = `${forecast.humidity}%`;
     var wind = `${forecast.wind_speed}km/h`;
 
