@@ -30,11 +30,8 @@ header  {
     justify-content:space-between;
     align-items:center;
     font-size: 30px;
-<<<<<<< Updated upstream
-=======
     border: solid 2px black;
     
->>>>>>> Stashed changes
 }
 
 
@@ -49,8 +46,6 @@ header  {
     
 }
 
-<<<<<<< Updated upstream
-=======
 #navbar {
     border: solid 2px purple;
     
@@ -68,7 +63,6 @@ li {
     border: dotted 1px black;
     padding: 1%;
 }
->>>>>>> Stashed changes
 
 a {
     text-decoration: none;
@@ -79,8 +73,8 @@ a {
     
     width:30%;
     margin-right: 1%;
-    border: solid 2px purple; 
     border-radius: 5%;
+    background-color: rgba(255, 255, 255, 0.6);
     
  
     
@@ -97,6 +91,8 @@ a {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+  
+
 }
 
 #main-container {
