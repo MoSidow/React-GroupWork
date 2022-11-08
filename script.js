@@ -1,5 +1,5 @@
-const APIURL = "https://api.openweathermap.org";
-const APIKEY = "272b68b95d1c42ff7655c2f715fa4879";
+const WEATHER_API_URL = 'https://api.openweathermap.org';
+const WEATHER_API_KEY = '272b68b95d1c42ff7655c2f715fa4879';
 
 
 var myLocation = document.getElementById('location');
@@ -22,9 +22,9 @@ function getLocation(){
 // Searches the weather for the location the user has entered, using the weather api to access up to date information
 function lookUp(search){
 
-  fetch(
-    `${APIURL}/geo/1.0/direct?q=${search}&limit=5&appid=${APIKEY}`  
-    )
+  var apiURL = `${WEATHER_API_URL}/geo/1.0/direct?q=${search}&limit=5&appid=${WEATHER_API_KEY}`
+
+  fetch(apiURL)
     .then((response) => response.json())
 
     .then(data => {
@@ -33,6 +33,8 @@ function lookUp(search){
       const locationInput = data[0];
 
       console.log(locationInput);
+
+      displayForecast(locationInput);
     });
   
   
@@ -41,28 +43,85 @@ function lookUp(search){
 // Displays the weather for the day it is searched for, including the temperature, wind speed and humidity
 function displayCurrentForecast(forecastData){
 
-  const currentForecast = forecastData.current;
+  var currentForecast = forecastData.current;
 
-  document.getElementById('temperature-value').textContent = "Temperature: ${currentForecast.temp}°C";
-  document.getElementById('humidity-value').textContent = "Humidity: ${currentForecast.humidity}%";
-  document.getElementById('wind-speed-value').textContent = "Wind Speed: ${currentForecast.wind}KM/H";
+  document.getElementById('daily-weather-box').textContent = `${currentForecast.temp_value}°C`;
+  document.getElementById('daily-weather-box').textContent = `${currentForecast.humidity}%`;
+  document.getElementById('daily-weather-box').textContent = `${currentForecast.wind_speed}KM/H`;
 }
 
-// Retrieves both the current and future weather forecasts for the location, displaying both of them onscreen.
+// Retrives the weather for the current and future 5 days
 function getWeather(lat, lon){
 
-  fetch(
-    `${APIURL}/data/2.5/onecall?lat=${lat}&lon=${lon}&limit=5&appid=${APIKEY}`
-    )
+  // var queryURL = `${WEATHER_API_URL}/data/2.5/onecall?lat=${lat}&lon=${lon}&appid=${WEATHER_API_KEY}`;
 
-    .then(function (response){
-      return response.json();
-    })
+  var queryURL = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&units=imperial&exclude=minutely,hourly&appid=d91f911bcf2c0f925fb6535547a5ddc9`
 
-    .then(function (data){
-      displayCurrentForecast(data);
-    })
+  console.log(queryURL);
+
+  fetch(queryURL)
+  .then(function (response) {
+    return response.json();
+  })
+
+  .then(function(data){
+    displayCurrentForecast(data);
+
+    displayFutureForecast(data);
+  })
+
+  
 }
+
+// Lists the future 5-day forecast for the location submitted
+function displayFutureForecast(forecastData){
+  // forecastData.daily;
+
+  const forecastList = document.getElementById('extra-weather-info');
+  forecastList.innerHTML = '';
+
+  // Logs the data for the forecast into the console, displaying the weather every 3 hours
+
+  for(var i=0; i<fiveDayForecast; i++){
+    var forecast = forecastData.daily[i];
+    console.log(forecast);
+    var day = new Date(forecast.dt * 1000).toLocaleDateString('en-GB', {weekday: 'long'});
+    var temp = `${forecast.temp_value}`;
+    var humidity = `${forecast.humidity}%`;
+    var wind = `${forecast.wind_speed}km/h`;
+
+    var newForecast = document.createElement('div');
+    newForecast.classList.add('extra-weather-info');
+    // Adds the html tags for the next 5 day forecast
+    newForecast.innerHTML =
+    `<div class='extra-weather-info'>
+      <div>
+        <p>${day}</p>
+      </div>
+
+      <div>
+        <p>${temp}</p>
+      </div>
+
+      <div>
+        <p>${humidity}</p>
+      </div>
+
+      <div>
+        <p>${wind}</p>
+      </div>
+    </div>`
+
+    forecastList.appendChild(newForecast);
+  }
+}
+
+function displayForecast(forecastData){
+  document.getElementById('location').textContent = `${forecastData.name}`, `${forecastData.country}`;
+  console.log(forecastData);
+  getWeather(forecastData.lat, forecastData.lon);
+}
+
 
 
 searchLocation.addEventListener("click", getLocation);
