@@ -155,15 +155,57 @@ function showHistory() {
       var showtext2 = showtext
       lookupLocation(text)
       
+      
+      
       showtext2.innerHTML = text
       searchText.value = liItem.innerHTML
+   
       
-      
-  })
+ })
 
   liItem.appendChild(txtNode);
   listItem.appendChild(liItem);
+
+
+// function to save location to local storage
+  function save() {
+    var new_location = liItem.innerHTML;
+    if(localStorage.getItem('cities') == null){
+      localStorage.setItem('cities', '[]')
+  }
+
+var old_location = JSON.parse(localStorage.getItem('cities'));
+old_location.push(new_location);
+
+localStorage.setItem('cities', JSON.stringify(old_location));
+
+
+
+}
+save();
+
+
   
 }
 
+
 saveButton.addEventListener("click", showHistory)
+
+
+// After refresh search history stays on webpage
+var cities = JSON.parse(localStorage.getItem("cities"))
+
+var listItem= document.getElementById("appended-location")
+
+for (var i=0; i < cities.length; i++ ){
+  
+  var cityDisp = document.createElement("li")
+  cityDisp.innerHTML = cities[i]
+  listItem.append(cityDisp)
+console.log(cities[i])
+  
+  
+}
+
+
+
