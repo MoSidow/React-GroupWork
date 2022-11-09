@@ -22,7 +22,7 @@ input[type=text] {
 }
 
 input[type=text]:focus {
-    border: 5px solid magenta;
+    border: 5px solid pink;
 }
 
 
@@ -38,9 +38,8 @@ p {
 }
 
 
-header  { 
+header { 
    
-    margin: 4%;
     color: white;
     text-shadow: 0 0 10px rgb(185, 92, 108);
     font-family: "sofia", "serif";
@@ -81,7 +80,7 @@ ul {
 }
 
 li {
-    margin:2%;
+    margin:16%;
     text-decoration: none;
     border: dotted 1px black;
     padding: 1%;

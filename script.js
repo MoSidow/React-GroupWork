@@ -2,7 +2,7 @@ const WEATHER_API_URL = 'https://api.openweathermap.org';
 const WEATHER_API_KEY = '272b68b95d1c42ff7655c2f715fa4879';
 
 
-var myLocation = document.getElementById('location');
+var myLocation = document.getElementById('location-input');
 var searchLocation = document.getElementById('search');
 var saveButton = document.getElementById("save-button")
 var showtext = document.getElementById("your-location")
@@ -118,7 +118,7 @@ function displayFutureForecast(forecastData){
 }
 
 function displayForecast(forecastData){
-  document.getElementById('location').textContent = `${forecastData.name}`, `${forecastData.country}`;
+  document.getElementById('location-input').textContent = `${forecastData.name}`, `${forecastData.country}`;
   console.log(forecastData);
   getWeather(forecastData.lat, forecastData.lon);
 }
@@ -144,7 +144,7 @@ searchLocation.addEventListener("click", function () {
 function onSavedLocationClick(e) {
   var savedLocation = e.target.textContent;
   var showtext1 = document.getElementById("your-location")
-  var input = document.getElementById('location');
+  var input = document.getElementById('location-input');
   lookUp(savedLocation);
   lookupLocation(savedLocation)
 
@@ -157,7 +157,7 @@ function onSavedLocationClick(e) {
 // function to display location on search history
 function onSaveLocation() {
 
-  var textval = document.getElementById("location").value;
+  var textval = document.getElementById("location-input").value;
   listItem = document.getElementById("appended-location");
 
   liItem = document.createElement("li");
