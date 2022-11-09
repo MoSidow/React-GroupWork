@@ -52,7 +52,6 @@ header {
     justify-content:center;
     align-items:center;
     font-size: 30px;
-    border: solid 2px black;
     
 }
 
@@ -71,7 +70,7 @@ header {
 }
 
 .logo-nav-container {
-    border: solid 2px purple;
+   
     background-color: rgba(255, 255, 255, 0.6);
     display:flex;
     justify-content: space-between; 
@@ -86,15 +85,19 @@ ul {
 }
 
 nav li {
-    margin:16%;
+    margin-left: 28%;
     text-decoration: none;
-    border: dotted 1px black;
-    padding: 1%;
+    border: solid 1px pink;
+    border-radius: 26%;
+    text-align: center;
 
 }
 
 li {    
     transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #appended-location {
@@ -116,7 +119,7 @@ a {
     
     width:30%;
     margin-right: 1%;
-    border-radius: 5%;
+    border-radius: 25px;
     background-color: rgba(255, 255, 255, 0.6);
     
  
@@ -214,6 +217,7 @@ li:hover {
     align-items: center;
     box-shadow: 10px 10px 50px grey;
     opacity: 0.7;
+    border-radius: 25px;
      
 }
 
@@ -225,7 +229,6 @@ li:hover {
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    border: solid 2px green;
 }
 
 #bottom-row  {
@@ -233,12 +236,10 @@ li:hover {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    border:solid 2px purple;
 }
 
 #title-row, #day-weather-row, #bottom-row {
     margin:1%;
-    border-radius: 3%;
 }
 
 #extra-weather-info {
