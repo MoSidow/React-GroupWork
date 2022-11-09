@@ -45,8 +45,7 @@ header  {
     text-shadow: 0 0 10px rgb(185, 92, 108);
     font-family: "sofia", "serif";
     display:flex;
-    text-align: center;
-    justify-content:space-between;
+    justify-content:center;
     align-items:center;
     font-size: 30px;
     border: solid 2px black;
@@ -59,24 +58,19 @@ header  {
     border: 1px solid #ddd;
     border-radius: 15px;
     padding: 5px;
-    width: 220px;
-   
-    
-    
+    width: 220px;   
+}
+
+#image-section {
+    display:flex;
+    width:15%;
 }
 
 #navbar {
     border: solid 2px purple;
     background-color: rgba(255, 255, 255, 0.6);
-    
-}
-#header h1 {
-    font-size: 20px;
-    padding-right: 20px;
-    float: right;
-    color: #f5cccc;
-    text-align: right;
-    text-align: justify;
+    display:flex;
+    justify-content: space-between; 
 }
 
 
@@ -92,6 +86,10 @@ li {
     border: dotted 1px black;
     padding: 1%;
 
+}
+
+a {
+    text-decoration: none;
 }
 
 #right-col {
