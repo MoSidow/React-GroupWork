@@ -79,9 +79,19 @@ header  {
     text-align: justify;
 }
 
+
 ul {
     display: flex;
+    list-style: none;
+    justify-content: right;
+}
+
+li {
+    margin:2%;
     text-decoration: none;
+    border: dotted 1px black;
+    padding: 1%;
+
 }
 
 #right-col {
