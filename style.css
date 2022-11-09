@@ -161,14 +161,18 @@ button {
     font-weight: bold;
     text-decoration: none;
     box-shadow: 7px 6px 28px 1px rgba(0, 0, 0, 0.24);
+    transition: all 0.3s ease-in-out;
+
   }
 
 
 
 
-.button-1:hover,
-.button-1:focus {
+button:hover {
   background-color: #F082AC;
+  cursor: pointer;
+  transform: scale(0.8);
+
 }
 
 
@@ -256,6 +260,7 @@ button {
     height: 400px;
     width: 100%;
     border-radius: 5%;
+    margin:1%;
     }
 
 
