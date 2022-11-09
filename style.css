@@ -125,12 +125,8 @@ a {
 
 }
 
-#day-weather-row {
-    
-    
-}
 
-#daily-weather-box {
+.daily-weather-style {
     width: 12%;
     height: 57%;
     margin: 1%;
