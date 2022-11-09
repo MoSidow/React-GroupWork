@@ -22,7 +22,7 @@ input[type=text] {
 }
 
 input[type=text]:focus {
-    border: 5px solid magenta;
+    border: 5px solid pink;
 }
 
 
@@ -37,16 +37,19 @@ p {
     margin: 4%;
 }
 
+h1 {
+    text-align: center;
+    
+}
 
-header  { 
+
+header { 
    
-    margin: 4%;
     color: white;
     text-shadow: 0 0 10px rgb(185, 92, 108);
     font-family: "sofia", "serif";
     display:flex;
-    text-align: center;
-    justify-content:space-between;
+    justify-content:center;
     align-items:center;
     font-size: 30px;
     border: solid 2px black;
@@ -59,24 +62,19 @@ header  {
     border: 1px solid #ddd;
     border-radius: 15px;
     padding: 5px;
-    width: 220px;
-   
-    
-    
+    width: 220px;   
 }
 
-#navbar {
+#image-section {
+    display:flex;
+    width:15%;
+}
+
+.logo-nav-container {
     border: solid 2px purple;
     background-color: rgba(255, 255, 255, 0.6);
-    
-}
-#header h1 {
-    font-size: 20px;
-    padding-right: 20px;
-    float: right;
-    color: #f5cccc;
-    text-align: right;
-    text-align: justify;
+    display:flex;
+    justify-content: space-between; 
 }
 
 
@@ -84,14 +82,25 @@ ul {
     display: flex;
     list-style: none;
     justify-content: right;
+
 }
 
-li {
-    margin:2%;
+nav li {
+    margin:16%;
     text-decoration: none;
     border: dotted 1px black;
     padding: 1%;
 
+}
+
+li {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color:red;
+
+}
+
+a {
+    text-decoration: none;
 }
 
 #right-col {
@@ -128,18 +137,14 @@ li {
 
 }
 
-#day-weather-row {
-    
-    
-}
 
-#daily-weather-box {
-    width: 12%;
-    height: 57%;
-    margin: 1%;
-    margin-top:5%;
+.daily-weather-style {
+    width: 15%;
+    height: 60%;
+    margin: 2%;
     background-color: white;
     border-radius: 5%; 
+    
 }
    
 button {
@@ -171,11 +176,7 @@ button {
 #left-col {
     width:70%;
     margin-left:2%;
-    border-radius: 5%;
-   /* box-shadow: 5px 15px rgb(245, 234, 234); 
-   background-image: linear-gradient(rgb(254, 254, 254),rgb(129, 129, 198)); */
-
-    
+    border-radius: 5%;   
 }
 
 
@@ -187,6 +188,7 @@ button {
 }
 
 #title-row  {
+    
     height:30vh;
     background-image: linear-gradient(rgb(254, 254, 254),rgb(183, 135, 180));
     display: flex;
@@ -194,14 +196,17 @@ button {
     align-items: center;
     box-shadow: 10px 10px 50px grey;
     opacity: 0.7;
-    
-    
+     
 }
+
+
 
 #day-weather-row{
     height:30vh;
     display:flex;
     flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
     border: solid 2px green;
 }
 
@@ -252,6 +257,8 @@ button {
     width: 100%;
     border-radius: 5%;
     }
+
+
 
 .box-shadow {
     box-shadow: 10px 10px 50px grey;
