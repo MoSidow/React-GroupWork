@@ -67,14 +67,17 @@ header {
 #image-section {
     display:flex;
     width:15%;
+
 }
 
 .logo-nav-container {
    
-    background-color: rgba(255, 255, 255, 0.6);
+    background-color: rgba(255, 255, 255, 0.2);
     display:flex;
     justify-content: space-between;
     padding:1%; 
+    
+    
 }
 
 
@@ -105,7 +108,7 @@ li {
 
 #appended-location {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: 200%;
+   
     color:black;
     display: flex;
     flex-direction: column;
@@ -136,6 +139,7 @@ a {
 
 #location-input {
     width:60%;
+    border-radius: 10px;
 }
 
 .search-section {
@@ -193,8 +197,8 @@ button:hover {
 }
 
 li:hover {
-    color: #fff;
-    box-shadow: inset 200px 0 0 0 #ce91ce;
+    color: rgb(0, 0, 0);
+    box-shadow: inset 200px 0 0 0 #ffffff;
     cursor: pointer;
 }
 
@@ -218,7 +222,7 @@ li:hover {
 #title-row  {
     
     height:30vh;
-    background-image: linear-gradient(rgb(254, 254, 254),rgb(183, 135, 180));
+    background-image: linear-gradient(rgb(254, 254, 254, 0.6),rgb(183, 135, 180, 0.6));
     display: flex;
     justify-content: space-around;
     align-items: center;
