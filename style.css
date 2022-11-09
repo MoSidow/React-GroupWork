@@ -1,6 +1,6 @@
 * {
     margin: 0;
-    padding: 0 
+    padding: 0;
 
 }
 
@@ -196,7 +196,8 @@ li:hover {
 
 #left-col {
     width:70%;
-    margin-left:2%;
+    margin-left:1%;
+    margin-right:1%;
     border-radius: 5%;   
 }
 
@@ -232,15 +233,12 @@ li:hover {
 }
 
 #bottom-row  {
-    height:100vh;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 
-#title-row, #day-weather-row, #bottom-row {
-    margin:1%;
-}
+
 
 #extra-weather-info {
     height: 30vh;
