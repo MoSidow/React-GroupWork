@@ -93,6 +93,10 @@ nav li {
 
 }
 
+li {    
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+}
+
 #appended-location {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 200%;
@@ -166,7 +170,7 @@ button {
     font-weight: bold;
     text-decoration: none;
     box-shadow: 7px 6px 28px 1px rgba(0, 0, 0, 0.24);
-    transition: all 0.3s ease-in-out;
+    transition: all 0.6s ease-in-out;
 
   }
 
@@ -177,6 +181,12 @@ button:hover {
   background-color: #F082AC;
   cursor: pointer;
   transform: scale(0.8);
+}
+
+li:hover {
+    color: #fff;
+    box-shadow: inset 200px 0 0 0 #ce91ce;
+    cursor: pointer;
 }
 
 
