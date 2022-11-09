@@ -138,73 +138,55 @@ searchLocation.addEventListener("click", function () {
 });
 
 
+
+
+function onSavedLocationClick(e) {
+  var savedLocation = e.target.textContent;
+  var showtext1 = document.getElementById("your-location")
+  var input = document.getElementById('location');
+  lookUp(savedLocation);
+  lookupLocation(savedLocation)
+
+  showtext1.innerHTML = savedLocation
+  input.value = savedLocation
+
+  
+}
+
 // function to display location on search history
-function showHistory() {
+function onSaveLocation() {
 
-    
-  var textval =  document.getElementById("location").value,
-  listItem = document.getElementById("appended-location"),
-  liItem = document.createElement("li"),
-  txtNode = document.createTextNode(textval);
+  var textval = document.getElementById("location").value;
+  listItem = document.getElementById("appended-location");
 
-// event-listener to search history "li"
-  liItem.addEventListener("click", function(){
-      var text = liItem.innerHTML
-      var searchText = document.getElementById("location");
-      var showtext2 = showtext
-      lookupLocation(text)
-      
-      
-      
-      showtext2.innerHTML = text
-      searchText.value = liItem.innerHTML
-   
-      
- })
-
-  liItem.appendChild(txtNode);
+  liItem = document.createElement("li");
+  liItem.textContent = textval;
+  liItem.addEventListener("click", onSavedLocationClick);
   listItem.appendChild(liItem);
 
+  console.log(liItem)
 
-// function to save location to local storage
-  function save() {
-    var new_location = liItem.innerHTML;
-    if(localStorage.getItem('cities') == null){
-      localStorage.setItem('cities', '[]')
-  }
+  var cities = JSON.parse(localStorage.getItem("cities")) || [];
+  cities.push(textval);
 
-var old_location = JSON.parse(localStorage.getItem('cities'));
-old_location.push(new_location);
-
-localStorage.setItem('cities', JSON.stringify(old_location));
-
-
-
-}
-save();
-
-
-  
+  localStorage.setItem('cities', JSON.stringify(cities));
 }
 
+function loadSavedLocations() {
+  var cities = JSON.parse(localStorage.getItem("cities")) || [];
 
-saveButton.addEventListener("click", showHistory)
+  listItem = document.getElementById("appended-location");
+  cities.forEach(function (city) {
+    var liItem = document.createElement("li");
+    liItem.textContent = city;
+    liItem.addEventListener("click", onSavedLocationClick);
 
-
-// After refresh search history stays on webpage
-var cities = JSON.parse(localStorage.getItem("cities"))
-
-var listItem= document.getElementById("appended-location")
-
-for (var i=0; i < cities.length; i++ ){
-  
-  var cityDisp = document.createElement("li")
-  cityDisp.innerHTML = cities[i]
-  listItem.append(cityDisp)
-console.log(cities[i])
-  
-  
+    listItem.appendChild(liItem);
+  });
 }
 
+loadSavedLocations();
+
+saveButton.addEventListener("click", onSaveLocation)
 
 
