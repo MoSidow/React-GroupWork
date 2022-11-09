@@ -3,7 +3,7 @@
 var searchLocation = document.getElementById('search');
 
 searchLocation.addEventListener("click", function () {
-    var searchText = document.getElementById("location").value;  
+    var searchText = document.getElementById("location-input").value;  
 
     
     lookupLocation(searchText);
