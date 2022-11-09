@@ -70,24 +70,19 @@ header  {
     background-color: rgba(255, 255, 255, 0.6);
     
 }
+#header h1 {
+    font-size: 20px;
+    padding-right: 20px;
+    float: right;
+    color: #f5cccc;
+    text-align: right;
+    text-align: justify;
+}
 
 ul {
     display: flex;
-    list-style: none;
-    justify-content: right;
-}
-
-li {
-    margin:2%;
-    text-decoration: none;
-    border: dotted 1px black;
-    padding: 1%;
-}
-
-a {
     text-decoration: none;
 }
-
 
 #right-col {
     
@@ -252,5 +247,9 @@ button {
     box-shadow: 10px 10px 50px grey;
 }
 
-
-/* media query to change display-flex to col and change the size of the boxes */
+.footer {
+    padding: 30px;
+    clear: both;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+}
