@@ -58,11 +58,11 @@ function displayFutureForecast(forecastData){
     // Creates the html tags for the next 5 days with the styles included
     forecastList.innerHTML = 
     `
-    <div id="daily-weather-box">
+    <div class="box-shadow daily-weather-style">
       ${day}
     </div>
 
-    <div id="daily-weather-box">
+    <div class="box-shadow daily-weather-style">
       ${temp}
     </div>
     `
