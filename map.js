@@ -48,7 +48,7 @@ function getPlaceId(result) {
     var placeId = result.predictions[0].place_id;
     geocodePlaceId(placeId);
 }
-
+// Place map marker, customised and animated
 function geocodePlaceId(placeId) {
     geocoder
         .geocode({
