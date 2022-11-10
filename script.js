@@ -6,7 +6,7 @@ var myLocation = document.getElementById('location-input');
 var searchLocation = document.getElementById('search');
 var saveButton = document.getElementById("save-button")
 var showtext = document.getElementById("your-location")
-
+var showtextError = document.getElementById("error-message")
 var fiveDayForecast = 6;
 
 // Gets the location the user has submitted
@@ -134,10 +134,20 @@ searchLocation.addEventListener("click", getLocation);
 searchLocation.addEventListener("click", function () {
     var searchText = myLocation;  
     var showtext1 = showtext
-    
+    var error = showtextError
     showtext1.innerHTML = searchText.value;
     
+    if (searchText.value === "") {
+      error.innerHTML = ("Please enter a location")
+    }
+
+    if (searchText.value !== "") {
+      error.innerHTML = ("")
+    }
+    
 });
+
+
 
 
 
@@ -165,6 +175,15 @@ function onSaveLocation() {
   liItem.textContent = textval;
   liItem.addEventListener("click", onSavedLocationClick);
   listItem.appendChild(liItem);
+  liItem.addEventListener("click", function () {
+    var searchText = myLocation;  
+    var error = showtextError
+
+    if (searchText.value !== "") {
+      error.innerHTML = ("")
+    }
+    
+});
 
   console.log(liItem)
 
@@ -182,7 +201,15 @@ function loadSavedLocations() {
     var liItem = document.createElement("li");
     liItem.textContent = city;
     liItem.addEventListener("click", onSavedLocationClick);
+    liItem.addEventListener("click", function () {
+      var searchText = myLocation;  
+      var error = showtextError
 
+      if (searchText.value !== "") {
+        error.innerHTML = ("")
+      }
+      
+  });
     listItem.appendChild(liItem);
   });
 }
