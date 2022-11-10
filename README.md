@@ -1,6 +1,11 @@
 # collaboration-setup
 
-```
+# Weather Dashboard 
+The current project is an interactive weather dashboard 
+
+
+
+
  ###USER STORY
 
 To create a interactve front-end aplication, including two different API's which can be interlinked with each other and be responsive on a web broswer. 
