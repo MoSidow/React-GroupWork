@@ -117,6 +117,13 @@ function displayForecast(forecastData){
   getWeather(forecastData.lat, forecastData.lon);
 }
 
+// Displays the current date and time that the user is visiting the site on 
+function time(){
+  var time = moment().format('MMM DD, YYYY, hh:mm:ss a')
+  $('#date-and-time').text(time);
+}
+
+time();
 
 
 searchLocation.addEventListener("click", getLocation);
