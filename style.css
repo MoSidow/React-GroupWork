@@ -34,6 +34,7 @@ p {
     text-align: center;
     font-family: "Open Sans", serif;
     margin: 4%;
+    font-size: 150%;
 }
 
 h1 {
@@ -94,15 +95,18 @@ nav li {
     border-radius: 10px;
     text-align: center;
     padding: 0 5% 0 5%;
+    font-size: 100%;
 
 
 }
 
 li {    
-    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+    transition: color .5s ease-in-out, box-shadow .3s ease-in-out;
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: 'Open Sans';
+    font-size: 150%;
 }
 
 #appended-location {
@@ -128,8 +132,10 @@ a {
     width:30%;
     margin-right: 1%;
     border-radius: 25px;
-    background-color: rgba(255, 255, 255, 0.6);
+    background-color: rgba(255, 255, 255, 0.35);
+
     
+
  
     
   /*  background-image: linear-gradient(rgb(222, 222, 236),rgb(135, 135, 214)); */
@@ -193,6 +199,7 @@ button:hover {
   background-color: #F082AC;
   cursor: pointer;
   transform: scale(0.8);
+  
 }
 
 li:hover {
@@ -221,12 +228,11 @@ li:hover {
 #title-row  {
     
     height:30vh;
-    background-image: linear-gradient(rgb(254, 254, 254, 0.6),rgb(183, 135, 180, 0.6));
+    background-image: linear-gradient(rgb(254, 254, 254, 0.5),rgb(183, 135, 180, 0.5));
     display: flex;
     justify-content: space-around;
     align-items: center;
     box-shadow: 10px 10px 50px grey;
-    opacity: 0.7;
     border-radius: 25px;
      
 }
@@ -310,6 +316,17 @@ li:hover {
 
     #left-col, #right-col {
         width:100%;
+ 
+    }
+
+    #left-col {
+        margin-top:2%;
+
+    }
+
+    #right-col{
+        background-color: rgba(255, 255, 255, 0.7);
+
     }
 
     .logo-nav-container{
@@ -319,6 +336,10 @@ li:hover {
     .extra-weather-info{
         width:80%;
         border-radius: 25px;
+    }
+
+    a {
+        color: rgb(229, 90, 90);
     }
     
 }
