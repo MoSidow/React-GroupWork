@@ -266,6 +266,8 @@ li:hover {
     text-align: center;
     display: flex;
     justify-content: center;
+    align-items: center;
+    font-size: 150%;
 }
 
 
@@ -283,8 +285,6 @@ li:hover {
     
     background-attachment: fixed;
     
-  
-
 }
 
 #map  {
@@ -293,6 +293,41 @@ li:hover {
     border-radius: 5%;
     margin:1%;
     }
+
+
+    #temp-value, #feels-like-value, #wind_gust_value, #uvi-value, #wind-speed-value, #humidity_value  {
+        background-position: center;
+        background-size: cover;
+    }
+
+#temp-value {
+    background-image: url("Poler.jpeg");
+    
+    
+}
+
+#feels-like-value { 
+    background-image: url("feels-like.jpg");
+   
+}
+
+#wind_gust_value { 
+    background-image: url("wind-speed.jpg");
+    
+}
+
+#uvi-value { 
+    background-image: url("uv.jpg");
+  
+}
+
+#wind-speed-value {
+    background-image: url("windy.jpg");
+}
+
+#humidity_value {
+    background-image: url("humidity.jpg");
+}
 
 
 
