@@ -42,10 +42,26 @@
   
     <main>
       <div id="main-container">
+
+        <aside id="right-col">
+          <div class="search-section">
+            <input type="text" id="location-input" placeholder="Enter a location"/>
+            <button id="search">Search</button>
+            <div id="map"></div> 
+            
+            <section class="saved-locations"></section>
+                <button id="save-button">Save location</button>
+                <ul id="appended-location"></ul>
+            </section>
+        </aside> 
+
+
+
+
         <section id="left-col">                    
           <div id="title-row">
                 <section>
-                    <p>Selected Location</p>
+                    <p>Selected Location:</p>
                     <p id="your-location"></p>
                     <p>Current date and Time </p>
                 </section>
@@ -86,27 +102,17 @@
 
           <div id="bottom-row">
 
-                <div id="temp-value" class="box-shadow daily-weather-style">Temperature: </div>
-                <div id="humidity_value" class="box-shadow daily-weather-style">Humidity: </div>
-                <div id="wind_gust_value" class="box-shadow daily-weather-style">Wind Gust: </div>
-                <div id="uvi-value" class="box-shadow daily-weather-style">UV Index: </div>
-                <div id="feels-like-value" class="box-shadow daily-weather-style">Feels Like: </div>
-                <div id="wind-speed-value" class="box-shadow daily-weather-style">Wind Speed: </div>
+                <div id="temp-value" class="box-shadow extra-weather-info">Temperature: </div>
+                <div id="humidity_value" class="box-shadow extra-weather-info">Humidity: </div>
+                <div id="wind_gust_value" class="box-shadow extra-weather-info">Wind Gust: </div>
+                <div id="uvi-value" class="box-shadow extra-weather-info">UV Index: </div>
+                <div id="feels-like-value" class="box-shadow extra-weather-info">Feels Like: </div>
+                <div id="wind-speed-value" class="box-shadow extra-weather-info">Wind Speed: </div>
            </div>
         </section>    
        
 
-        <aside id="right-col">
-          <div class="search-section">
-            <input type="text" id="location-input" placeholder="Enter a location"/>
-            <button id="search">Search</button>
-            <div id="map"></div> 
-            
-            <section class="saved-locations"></section>
-                <button id="save-button">Save location</button>
-                <ul id="appended-location"></ul>
-            </section>
-        </aside> 
+    
 
    
 
@@ -126,7 +132,7 @@
 <footer>
   <div class="footer">
   <h4>Made with ❤️️ by Team React</h4>
-  <p>&copy; 2019 Team React Inc.
+  <p>&copy; 2022 Team React Inc.
   </p>
  </footer>
 
