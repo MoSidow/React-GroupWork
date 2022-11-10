@@ -124,7 +124,7 @@ a {
     text-decoration: none;
     color:palevioletred;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    
+    width: 100px;
 }
 
 #right-col {
@@ -349,6 +349,7 @@ li:hover {
         width:100%;
     }
 
+
     #left-col, #right-col {
         width:100%;
  
@@ -366,6 +367,8 @@ li:hover {
 
     .logo-nav-container{
         justify-content: space-between;
+        width:100%;
+        
     }
 
     .extra-weather-info{
@@ -375,6 +378,10 @@ li:hover {
 
     a {
         color: rgb(229, 90, 90);
+        width: 50px;
+        font-size: 90%;
+        
+        
     }
     
 }
