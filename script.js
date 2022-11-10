@@ -7,7 +7,7 @@ var searchLocation = document.getElementById('search');
 var saveButton = document.getElementById("save-button")
 var showtext = document.getElementById("your-location")
 
-var fiveDayForecast = 5;
+var fiveDayForecast = 6;
 
 // Gets the location the user has submitted
 function getLocation(){
@@ -47,16 +47,18 @@ function displayFutureForecast(forecastData){
   futureTempValue.innerHTML = '';
 
   // Looping through the five days, displaying each day and its weather
-  for(var i=0; i<fiveDayForecast; i++){
+  for(var i=1; i<fiveDayForecast; i++){
     var forecast = forecastData.daily[i];
     console.log(forecast);
     var day = new Date(forecast.dt * 1000).toLocaleDateString('en-GB', {weekday: 'long'});
     var temp = `${forecast.temp.day}°F`;
 
     var forecastList = document.createElement('div');
-    forecastList.classList.add('daily-weather-style')
+    forecastList.classList.add('daily-weather-style');
+    // Creates the html tags for the next 5 days with the styles included
     forecastList.innerHTML = 
-    `<div id="daily-weather-box">
+    `
+    <div id="daily-weather-box">
       ${day}
     </div>
 
@@ -64,21 +66,15 @@ function displayFutureForecast(forecastData){
       ${temp}
     </div>
     `
+
+    futureTempValue.appendChild(forecastList);
   }
-
-  futureTempValue.appendChild(forecastList);
-
-  // document.getElementById('temp_value').textContent = `${currentForecast.temp}°F`;
-  // console.log(document.getElementById('temp_value').textContent = `${currentForecast.temp}°F`)
-  // // document.getElementById('daily-weather-box').textContent = `${currentForecast.humidity}%`;
-  // console.log(document.getElementById('humidity_value').textContent = `${currentForecast.humidity}%`);
-  // // document.getElementById('daily-weather-box').textContent = `${currentForecast.wind_speed}KM/H`;
-  // console.log(document.getElementById('wind_speed_value').textContent = `${currentForecast.wind_speed}KM/H`)
 }
 
 // Retrives the weather for the current and future 5 days
 function getWeather(lat, lon){
 
+  // Fetches the url to include the locations weather infomation (wind speed/pressure, chances of rain)
   var queryURL = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&units=imperial&exclude=minutely,hourly&appid=d91f911bcf2c0f925fb6535547a5ddc9`
 
   console.log(queryURL);
@@ -100,7 +96,6 @@ function getWeather(lat, lon){
 // Displays the extra information about the location other than its temperature for the current day the user has submitted it
 // Examples: humidity, wind speed, chance of rain, pressure
 function displayExtraInfo(forecastData){
-  // forecastData.daily;
 
   const extraInfo = forecastData.current;
 
@@ -113,46 +108,9 @@ function displayExtraInfo(forecastData){
   document.getElementById('feels-like-value').textContent = `Feels Like: ${extraInfo.feels_like}°F`
   document.getElementById('wind-speed-value').textContent = `Wind Speed: ${extraInfo.wind_speed}km/h`
 
-
-  // const forecastList = document.getElementById('extra-weather-info');
-  // forecastList.innerHTML = '';
-
-  // Logs the data for the forecast into the console, displaying the weather every 3 hours
-
-  // for(var i=0; i<fiveDayForecast; i++){
-  //   var forecast = forecastData.daily[i];
-  //   console.log(forecast);
-  //   var day = new Date(forecast.dt * 1000).toLocaleDateString('en-GB', {weekday: 'long'});
-  //   var temp = `${forecast.temp.day}°F`;
-  //   var humidity = `${forecast.humidity}%`;
-  //   var wind = `${forecast.wind_speed}km/h`;
-
-  //   var newForecast = document.createElement('div');
-  //   newForecast.classList.add('box-shadow');
-  //   // Adds the html tags for the next 5 day forecast
-  //   newForecast.innerHTML =
-  //   `<div id='extra-weather-info'>
-  //     <div>
-  //       <p>${day}</p>
-  //     </div>
-
-  //     <div>
-  //       <p>${temp}</p>
-  //     </div>
-
-  //     <div>
-  //       <p>${humidity}</p>
-  //     </div>
-
-  //     <div>
-  //       <p>${wind}</p>
-  //     </div>
-  //   </div>`
-
-  //   forecastList.appendChild(newForecast);
-  // }
 }
 
+// Displays the weather forecast for the location and its country
 function displayForecast(forecastData){
   document.getElementById('location-input').textContent = `${forecastData.name}`, `${forecastData.country}`;
   console.log(forecastData);
