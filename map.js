@@ -56,14 +56,19 @@ function geocodePlaceId(placeId) {
         })
         .then(({ results }) => {
             if (results[0]) {
-                map.setZoom(11);
+                map.setZoom(10);
                 map.setCenter(results[0].geometry.location);
-                const marker = new google.maps.Marker({
-                    map,
-                    position: results[0].geometry.location,
-                });
+                const image =
+                "New Logo-2.svg";
+              const Marker = new google.maps.Marker({
+                position: results[0].geometry.location,
+                map,
+                animation: google.maps.Animation.DROP,
+                scaledSize: new google.maps.Size(2, 1),
+                icon: image,
+              });
                 infowindow.setContent(results[0].formatted_address);
-                infowindow.open(map, marker);
+                infowindow.open(map, Marker);
             } else {
                 window.alert("No results found");
             }
