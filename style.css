@@ -35,7 +35,7 @@ p {
     text-align: center;
     font-family: "Open Sans", serif;
     margin: 4%;
-    font-size: 150%;
+    font-size: 120%;
 }
 
 h1 {
@@ -193,19 +193,30 @@ li:hover {
     border-radius: 5%;
 }
 
-#main-container {
-    display: flex;
+
+
+
+#main-container{
+    display:flex;
+  
 }
+
+#title-row  {
+    
+    background-image: linear-gradient(rgba(254, 254, 254, 0.208), rgba(255, 255, 255, 0.3));
+
+
 
 #title-row {
     height: 30vh;
     background-image: linear-gradient(rgb(254, 254, 254, 0.5), rgb(183, 135, 180, 0.5));
     display: flex;
-    justify-content: space-around;
-    align-items: center;
+    justify-content: center;
     box-shadow: 10px 10px 50px grey;
     border-radius: 25px;
     width: 100%;
+    margin-bottom: 3%;
+ 
 }
 
 #day-weather-row {
