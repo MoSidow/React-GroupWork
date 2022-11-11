@@ -22,13 +22,6 @@ function initMap() {
     geocoder = new google.maps.Geocoder();
     infowindow = new google.maps.InfoWindow();
 }
-// Gets search text and send to the lookuplocation
-function getPlaceData() {
-    
-    var input = getElementById("mapsearch");
-    t.input.textcontent.addEventListener("onclick");
-    prompt(lookupLocation);
-}
 
 function lookupLocation(location) {
     var requestOptions = {
@@ -48,6 +41,7 @@ function getPlaceId(result) {
     var placeId = result.predictions[0].place_id;
     geocodePlaceId(placeId);
 }
+
 // Place map marker, customised and animated
 function geocodePlaceId(placeId) {
     geocoder
@@ -69,11 +63,9 @@ function geocodePlaceId(placeId) {
               });
                 infowindow.setContent(results[0].formatted_address);
                 infowindow.open(map, Marker);
-            } else {
-                window.alert("No results found");
-            }
+            } 
         })
-        .catch((e) => window.alert("Geocoder failed due to: " + e));
+        
 }
 
 
