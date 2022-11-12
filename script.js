@@ -51,6 +51,7 @@ function displayFutureForecast(forecastData) {
     var forecast = forecastData.daily[i];
     console.log(forecast);
     var day = new Date(forecast.dt * 1000).toLocaleDateString('en-GB', { weekday: 'long' });
+    var iconCode = forecast.weather[0].icon; 
     var temp = `${forecast.temp.day}°F`;
 
     var forecastList = document.createElement('div');
@@ -61,7 +62,9 @@ function displayFutureForecast(forecastData) {
     <div class="box-shadow ">
       ${day}
     </div>
-
+    <div class="box-shadow ">
+    ${"<img src=http://openweathermap.org/img/wn/"+iconCode+".png>"}
+  </div>
     <div class="box-shadow ">
       ${temp}
     </div>
