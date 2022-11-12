@@ -36,6 +36,7 @@ p {
     font-family: "Open Sans", serif;
     margin: 4%;
     font-size: 150%;
+    font-weight: bold;
 }
 
 h1 {
@@ -78,13 +79,14 @@ ul {
 }
 
 nav li {
-    margin-left: 28%;
+ 
     text-decoration: none;
     border: solid 1px pink;
     border-radius: 10px;
     text-align: center;
     padding: 0 5% 0 5%;
     font-size: 100%;
+    margin-left: 9%;
 }
 
 li {
@@ -140,6 +142,7 @@ a {
 
 .summary-item {
     display: flex;
+    flex-direction: column;
 }
 
 #main-container {
@@ -155,6 +158,10 @@ a {
     margin: 2%;
     background-color: white;
     border-radius: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
 }
 
 button {
@@ -198,14 +205,15 @@ li:hover {
 }
 
 #title-row {
-    height: 30vh;
+  
     background-image: linear-gradient(rgb(254, 254, 254, 0.5), rgb(183, 135, 180, 0.5));
     display: flex;
     justify-content: space-around;
     align-items: center;
     box-shadow: 10px 10px 50px grey;
     border-radius: 25px;
-    width: 100%;
+    padding:1%;
+    margin-bottom: 1%;
 }
 
 #day-weather-row {
@@ -324,8 +332,9 @@ li:hover {
         background-color: rgba(255, 255, 255, 0.7);
     }
 
+
     .logo-nav-container {
-        justify-content: space-between;
+        justify-content: space-evenly;
         width: 100%;
     }
 
@@ -338,5 +347,7 @@ li:hover {
         color: rgb(229, 90, 90);
         width: 50px;
         font-size: 90%;
+
+
     }
 }
