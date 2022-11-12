@@ -56,16 +56,17 @@ function displayFutureForecast(forecastData) {
 
     var forecastList = document.createElement('div');
     forecastList.classList.add('daily-weather-style');
+    forecastList.classList.add('box-shadow');
     // Creates the html tags for the next 5 days with the styles included
     forecastList.innerHTML =
       `
-    <div class="box-shadow ">
+    <div>
       ${day}
     </div>
-    <div class="box-shadow ">
+    <div>
     ${"<img src=http://openweathermap.org/img/wn/"+iconCode+".png>"}
   </div>
-    <div class="box-shadow ">
+    <div>
       ${temp}
     </div>
     `
