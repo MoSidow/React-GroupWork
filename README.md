@@ -17,6 +17,7 @@ The current project is an interactive weather dashboard incorporating the google
 
 # Screenshots
 
+
 # Deployed Link
 ![] https://mosidow.github.io/React-GroupWork/
 
