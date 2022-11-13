@@ -164,6 +164,7 @@ a {
     justify-content: space-evenly;
 }
 
+
 button {
     display: flex;
     justify-content: center;
@@ -206,7 +207,7 @@ li:hover {
 
 #title-row {
   
-    background-image: linear-gradient(rgb(254, 254, 254, 0.5), rgb(183, 135, 180, 0.5));
+    background-image: linear-gradient(rgb(254, 254, 254, 0.3), rgb(183, 135, 180, 0.3));
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -334,9 +335,11 @@ li:hover {
 
 
     .logo-nav-container {
-        justify-content: space-evenly;
+        
         width: 100%;
+
     }
+
 
     .extra-weather-info {
         width: 80%;
@@ -345,9 +348,20 @@ li:hover {
 
     a {
         color: rgb(229, 90, 90);
-        width: 50px;
+        width: 65px;
         font-size: 90%;
-
-
     }
+
+    li {
+        margin-right:4%;
+    }
+
+   #title-row {background-image: linear-gradient(rgb(254, 254, 254, 0.8), rgb(183, 135, 180, 0.8))
+   }
+
+/* Trying to make website responsive on different devices */
+    h1 { 
+        font-size: 180%;
+    }
+
 }
