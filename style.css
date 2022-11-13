@@ -52,7 +52,7 @@ header {
     align-items: center;
     font-size: 30px;
 }
-
+x
 #logo {
     border: 1px solid #ddd;
     border-radius: 15px;
@@ -68,14 +68,14 @@ header {
 .logo-nav-container {
     background-color: rgba(255, 255, 255, 0.2);
     display: flex;
-    justify-content: right;
+    justify-content: center;
     padding: 1%;
 }
 
 ul {
     display: flex;
     list-style: none;
-    justify-content: right;
+    justify-content: center;
 }
 
 nav li {
