@@ -18,6 +18,13 @@ The current project is an interactive weather dashboard incorporating the google
 # Screenshots
 
 
+# Usage 
+ Once the application is loaded in:
+ * The user should enter a location into the search bar 
+ * This will fetch the location and display it on the current map and display the weather fort the current and following 4 day(s)
+ * Locations can be saved by using the save button and the weather data can be revisited by clicking the newly saved locations 
+ 
+
 # Deployed Link
-![] https://mosidow.github.io/React-GroupWork/
+https://mosidow.github.io/React-GroupWork/
 
