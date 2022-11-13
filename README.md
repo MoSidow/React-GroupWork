@@ -16,7 +16,8 @@ The current project is an interactive weather dashboard incorporating the google
 * Have a quality README (with unique name, description, technologies used, screenshot, and link to deployed application)
 
 # Screenshots
-
+![](https://github.com/MoSidow/React-GroupWork/blob/b1a23539162abbe708ff75b9211dbdd6f62555fd/Assets/README-images/Screenshot%201.png)
+![](https://github.com/MoSidow/React-GroupWork/blob/b1a23539162abbe708ff75b9211dbdd6f62555fd/Assets/README-images/Screenshot%202.png)
 
 # Usage 
  Once the application is loaded in:
