@@ -30,4 +30,4 @@ The current project is an interactive weather dashboard incorporating the google
 https://mosidow.github.io/React-GroupWork/
 
 #Powerpoint Link
-https://docs.google.com/presentation/d/1txS5TgxNnIsFAsDgkDi0meDEVnitRqQB/edit?usp=sharing&ouid=114950824953680917095&rtpof=true&sd=true
+https://docs.google.com/presentation/d/12kOq4IeC80NtM_ksxEJffUDe6joo23da/edit?usp=share_link&ouid=114950824953680917095&rtpof=true&sd=true
