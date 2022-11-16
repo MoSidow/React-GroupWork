@@ -37,7 +37,7 @@ function lookupLocation(location) {
 
 
 function getPlaceId(result) {
-    console.log(result);
+   
     var placeId = result.predictions[0].place_id;
     geocodePlaceId(placeId);
 }

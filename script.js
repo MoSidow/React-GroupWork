@@ -13,7 +13,7 @@ var fiveDayForecast = 6;
 function getLocation() {
   var userInput = myLocation.value;
 
-  console.log('Pressed');
+ 
 
   // Outputs the result of the function once the user has searched for their desired location
   lookUp(userInput);
@@ -32,7 +32,7 @@ function lookUp(search) {
       // Sets the locations weather information (lat, lon, humidity, temp) into an object, displaying it into the console
       const locationInput = data[0];
 
-      console.log(locationInput);
+      
 
       displayForecast(locationInput);
     });
@@ -49,7 +49,7 @@ function displayFutureForecast(forecastData) {
   // Looping through the five days, displaying each day and its weather
   for (var i = 1; i < fiveDayForecast; i++) {
     var forecast = forecastData.daily[i];
-    console.log(forecast);
+    
     var day = new Date(forecast.dt * 1000).toLocaleDateString('en-GB', { weekday: 'long' });
     var iconCode = forecast.weather[0].icon; 
     var temp = `${forecast.temp.day}°F`;
@@ -109,7 +109,7 @@ function displayExtraInfo(forecastData) {
 // Displays the weather forecast for the location and its country
 function displayForecast(forecastData) {
   document.getElementById('location-input').textContent = `${forecastData.name}`, `${forecastData.country}`;
-  console.log(forecastData);
+
   getWeather(forecastData.lat, forecastData.lon);
 }
 
